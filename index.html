@@ -1,47 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Episode 3: Lists and Computed Properties</title>
     <script src="https://unpkg.com/vue@3"></script>
-    <style>
-        html, body {
-            height: 100%;
-        }
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        body {
-            display: grid;
-            place-items: center;
-        }
-
-        .text-red {
-            color: red;
-        }
-
-        .text-green {
-            color: green;
-        }
-    </style>
 </head>
-<body>
-<div id="app">
-    <button :class="active ? 'text-red' : 'text-green'" @click="toggle">click me</button>
 
-</div>
-<script>
-    Vue.createApp({
-        data() {
-            return {
-                active: false
-            }
-        },
+<body class="h-full grid place-items-center">
+    <div id="app">
+        <section v-show="inProgessAssignements.length">
+            <h2 class="font-bold mb-2">In Progress</h2>
 
-        methods: {
-            toggle() {
-                this.active = !this.active;
+            <ul>
+                <li v-for="assignment in inProgessAssignements" :key="assignment.id">
+                    <label>
+                        {{ assignment.name }}
+                        <input type="checkbox" v-model="assignment.complete">
+                    </label>
+
+                </li>
+            </ul>
+        </section>
+        <section v-show="completedAssignements.length" class="mt-8">
+            <h2 class="font-bold mb-2">Completed</h2>
+
+            <ul>
+                <li v-for="assignment in completedAssignements">
+                    <label>
+                        {{ assignment.name }}
+                        <input type="checkbox" v-model="assignment.complete">
+                    </label>
+
+                </li>
+            </ul>
+        </section>
+    </div>
+    <script>
+        let app = {
+            data() {
+                return {
+                    assignments: [
+                        { name: 'Finish Project ', complete: false, id: 1 },
+                        { name: 'Read chapter 4', complete: false, id: 2 },
+                        { name: 'Turn in homeword', complete: false, id: 3 },
+                    ]
+                }
+            },
+            computed: {
+                inProgessAssignements() {
+                    return this.assignments.filter(assignment => ! assignment.complete);
+                },
+
+                completedAssignements() {
+                    return this.assignments.filter(assignment => assignment.complete);
+                }
             }
         }
-    }).mount('#app');
-</script>
+        Vue.createApp(app).mount('#app')
+
+    </script>
 </body>
+
 </html>
