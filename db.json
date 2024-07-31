@@ -1,0 +1,94 @@
+{
+  "assignments": [
+    {
+      "name": "Finish Project",
+      "complete": false,
+      "id": 1,
+      "tag": "math"
+    },
+    {
+      "name": "Read Chapter 4",
+      "complete": true,
+      "id": 2,
+      "tag": "literature"
+    },
+    {
+      "name": "Write Essay on Climate Change",
+      "complete": false,
+      "id": 3,
+      "tag": "science"
+    },
+    {
+      "name": "Solve 10 Algebra Problems",
+      "complete": false,
+      "id": 4,
+      "tag": "math"
+    },
+    {
+      "name": "Group Presentation on World War II",
+      "complete": true,
+      "id": 5,
+      "tag": "history"
+    },
+    {
+      "name": "Complete Lab Report",
+      "complete": false,
+      "id": 6,
+      "tag": "biology"
+    },
+    {
+      "name": "Study for Final Exam",
+      "complete": false,
+      "id": 7,
+      "tag": "physics"
+    },
+    {
+      "name": "Practice French Vocabulary",
+      "complete": true,
+      "id": 8,
+      "tag": "language"
+    },
+    {
+      "name": "Finish Coding Assignment",
+      "complete": false,
+      "id": 9,
+      "tag": "computer science"
+    },
+    {
+      "name": "Prepare Art Portfolio",
+      "complete": true,
+      "id": 10,
+      "tag": "art"
+    },
+    {
+      "name": "Review for Quiz on Cells",
+      "complete": false,
+      "id": 11,
+      "tag": "biology"
+    },
+    {
+      "name": "Watch Documentary on Space Exploration",
+      "complete": true,
+      "id": 12,
+      "tag": "astronomy"
+    },
+    {
+      "name": "Create a Budget Plan",
+      "complete": false,
+      "id": 13,
+      "tag": "economics"
+    },
+    {
+      "name": "Analyze Poem for Literary Devices",
+      "complete": false,
+      "id": 14,
+      "tag": "literature"
+    },
+    {
+      "name": "Research Paper on Renewable Energy",
+      "complete": false,
+      "id": 15,
+      "tag": "science"
+    }
+  ]
+}
